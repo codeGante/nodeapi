@@ -1,4 +1,4 @@
-var express = require('express'),
+let express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
   bodyParser = require('body-parser');
@@ -6,7 +6,7 @@ var express = require('express'),
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/listOrderRoute');
+let routes = require('./api/routes/listOrderRoute');
 routes(app); 
 
 app.listen(port);
